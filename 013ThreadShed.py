@@ -113,7 +113,6 @@ green&white;,;09/15/17,   Gail Phelps   ;,;$30.52
 ;,;   $22.66   ;,; green&white&blue;,;09/15/17"""
 
 #------------------------------------------------
-# Start coding below!
 
 daily_sales_replaced = daily_sales.replace(";,;","@")
 print(daily_sales_replaced)
