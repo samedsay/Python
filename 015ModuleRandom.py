@@ -11,3 +11,11 @@ for i in range(101):
 # Printing randomer_number below:
 randomer_number = random.choice(random_list)
 print(randomer_number)
+
+# Showing data on diagram
+from matplotlib import pyplot as plt
+
+numbers_a = range(1,13)
+numbers_b = random.sample(range(1, 100), 12)
+plt.plot(numbers_a,numbers_b)
+plt.show()
