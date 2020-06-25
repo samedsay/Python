@@ -51,3 +51,23 @@ plays["Respect"] = 94
 library = {"The Best Songs":plays, "Sunday Feelings":{}}
 print(library)
 
+# Return Value in Dictionary
+user_ids = {"teraCoder": 100019, "pythonGuy": 182921, "samTheJavaMaam": 123112, "lyleLoop": 102931, "keysmithKeith": 129384}
+
+tc_id = user_ids.get("teraCoder",100000)
+print(tc_id)
+stack_id = user_ids.get("superStackSmash",100000)
+print(stack_id)
+
+# pop() and get() method in Dictionary (Deletion key)
+available_items = {"health potion": 10, "cake of the cure": 5, "green elixir": 20, "strength sandwich": 25, "stamina grains": 15, "power stew": 30}
+health_points = 20
+health_points += available_items.pop("stamina grains",0)
+health_points += available_items.pop("power stew",0)
+health_points += available_items.pop("mystic bread", 0)
+print(health_points)
+print(available_items)
+
+
+
+
