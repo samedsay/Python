@@ -80,6 +80,19 @@ lessons = dict_keys
 print(users)
 print(lessons)
 
+# values() method to all values from the dictinary
+num_exercises = {"functions": 10, "syntax": 13, "control flow": 15, "loops": 22, "lists": 19, "classes": 18, "dictionaries": 18}
+
+total_exercises = 0
+for i in list(num_exercises.values()):
+  total_exercises += i
+print(total_exercises)
+
+# item() method to all keys and values from dictionary
+pct_women_in_occupation = {"CEO": 28, "Engineering Manager": 9, "Pharmacist": 58, "Physician": 40, "Lawyer": 37, "Aerospace Engineer": 9}
+
+for key,value in pct_women_in_occupation.items():
+  print("Women make up " + str(value) + " percent of " + key + "s")
 
 
 
