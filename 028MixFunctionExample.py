@@ -92,6 +92,34 @@ def add_ten(my_dictionary):
 
 ######################################################
 
+def values_that_are_keys(my_dictionary):
+  returnedList = []
+  for value in my_dictionary.values():
+    if value in my_dictionary.keys():
+      returnedList.append(value)
+  return returnedList
 
+######################################################d
+
+def max_key(my_dictionary):
+  largest_key = ""
+  largest_value = float("-inf")
+
+  for key, value in my_dictionary.items():
+    if largest_value < value:
+      largest_value = value
+      largest_key = key
+      
+  return largest_key
+
+######################################################
+
+def word_length_dictionary(words):
+  dictionaryWords = {}
+  for word in words:
+    dictionaryWords[word] = len(word)
+  return dictionaryWords
+
+######################################################
 
 
