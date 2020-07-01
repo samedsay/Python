@@ -76,5 +76,14 @@ def sum_values(my_dictionary):
 
 ######################################################
 
+def sum_even_keys(my_dictionary):
+  total = 0
+  for keys in my_dictionary.keys():
+    if keys % 2 == 0:
+      total += my_dictionary.get(keys)
+  return total
+
+######################################################
+
 
 
