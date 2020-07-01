@@ -133,6 +133,22 @@ def frequency_dictionary(words):
 
 ######################################################
 
+def unique_values(my_dictionary):
+  seen_values = []
+  for value in my_dictionary.values():
+    if value not in seen_values:
+      seen_values.append(value)
+  return len(seen_values)
 
+######################################################
+
+def count_first_letter(names):
+  newDictionary = {}
+  for key, value in names.items():
+    if key[0] not in newDictionary.keys():
+      newDictionary[key[0]] = len(value)
+    else:
+      newDictionary[key[0]] += len(value)
+  return newDictionary
 
 
