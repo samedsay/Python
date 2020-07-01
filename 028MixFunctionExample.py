@@ -122,4 +122,17 @@ def word_length_dictionary(words):
 
 ######################################################
 
+def frequency_dictionary(words):
+  freqDictionary = {}
+  for word in words:
+    if word not in freqDictionary.keys():
+      freqDictionary[word] = 1
+    else:
+      freqDictionary[word] += 1
+  return freqDictionary
+
+######################################################
+
+
+
 
