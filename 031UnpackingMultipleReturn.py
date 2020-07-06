@@ -13,7 +13,6 @@ path_segment_1 = "/Home/User"
 path_segment_2 = "Codecademy/videos"
 path_segment_3 = "cat_videos/surprised_cat.mp4"
 myTuple = [path_segment_1, path_segment_2, path_segment_3]
-# join all three of the paths here!
 print("/".join(myTuple))
 
 def myjoin(*segments):
@@ -22,3 +21,17 @@ def myjoin(*segments):
     myTuple.append(segment)
   joinedString = "/".join(myTuple)
   return joinedString
+
+# Keyword Argument Unpacking
+print("My Youtube channel name is {name} and I'm feeling {feeling}.".format(
+name = "samedify", feeling = "happy and determined"))
+
+from products import create_product
+def create_products(**products_dict):
+  for name, price in products_dict.items():
+    create_product(name, price)
+
+create_products(
+  Baseball = 3, Shirt = 14, Guitar = 70)
+
+
