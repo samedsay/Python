@@ -12,5 +12,24 @@ def get_math_function(operation):   # '+' or '-'
 add_function = get_math_function("+")
 sub_function = get_math_function("-")
 
-print( add_function(3, 5) )
-print( sub_function(7, 2) )
+print(add_function(3, 5))
+print(sub_function(7, 2))
+
+# Decorating Functions
+
+def title_decorator(print_name_function):
+  def wrapper():
+    print("Professor:")
+    print_name_function
+  return wrapper()
+
+def print_my_name():
+  print("Mike")
+  
+def print_joen_name():
+  print("Joen")
+  
+decorated_function = title_decorator(print_my_name)
+decorated_function()
+
+
