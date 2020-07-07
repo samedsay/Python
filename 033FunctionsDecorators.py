@@ -20,7 +20,7 @@ print(sub_function(7, 2))
 def title_decorator(print_name_function):
   def wrapper():
     print("Professor:")
-    print_name_function
+    print_name_function()
   return wrapper()
 
 def print_my_name():
@@ -31,5 +31,48 @@ def print_joen_name():
   
 decorated_function = title_decorator(print_my_name)
 decorated_function()
+
+# Decorators
+
+def title_decorator(print_name_function):
+  def wrapper():
+    print("Professor:")
+    print_name_function()
+  return wrapper
+  
+@title_decorator
+def print_my_name():
+  print("Mike")
+  
+@title_decorator
+def print_joen_name():
+  print("Joen")
+ 
+print_my_name()
+print_joen_name()
+
+  
+# Decorators w/ Parameters
+
+def title_decorator(print_name_function):
+  def wrapper(*args, **kwargs):
+    print("Professor:")
+    print_name_function(*args, **kwargs)
+  return wrapper
+  
+@title_decorator
+def print_my_name(name, age):
+  print(name + " you are " + str(age))
+  
+print_my_name("Smd", 23)
+  
+@title_decorator
+def print_joen_name(name):
+  print(name)
+  
+print_joen_name("Joen")
+
+
+
 
 
